@@ -2,23 +2,14 @@ package com.inflearn.infleantoby;
 
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
- import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 @Configuration
+@ComponentScan(basePackages = "com.inflearn.*")
 public class InfleanTobyApplication {
-    @Bean
-    public TestController testController(TestService testService) {
-        return new TestController(testService);
-    }
-
-    @Bean
-    public TestService testService() {
-        return new SimpleTestService();
-    }
 
     // standalone program
     public static void main(String[] args) {
