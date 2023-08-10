@@ -1,5 +1,6 @@
 package com.inflearn.infleantoby;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
@@ -25,24 +26,6 @@ public class App {
 
     // standalone program
     public static void main(String[] args) {
-        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
-            @Override
-            protected void onRefresh() {
-                super.onRefresh();
-
-                ServletWebServerFactory serverFactory = this.getBean(ServletWebServerFactory.class);
-                DispatcherServlet dispatcherServlet = this.getBean(DispatcherServlet.class);
-//                dispatcherServlet.setApplicationContext(this);
-
-                WebServer webServer = serverFactory.getWebServer(servletContext -> {
-                    servletContext.addServlet("dispatcherServlet", dispatcherServlet)
-                            .addMapping("/*");
-                });
-
-                webServer.start();
-            }
-        };
-        applicationContext.register(App.class);
-        applicationContext.refresh(); // 상태 갱신. Template Pattern으로 동작한다.
+        SpringRunnerApplication.run(App.class, args);
     }
 }
