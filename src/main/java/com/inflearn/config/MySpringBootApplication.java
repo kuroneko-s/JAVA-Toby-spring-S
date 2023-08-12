@@ -1,5 +1,6 @@
-package com.inflearn.infleantoby;
+package com.inflearn.config;
 
+import com.inflearn.config.EnableMyAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,5 +11,6 @@ import java.lang.annotation.*;
 @Documented
 @Configuration
 @ComponentScan
-public @interface MySpringBootAnnotation {
+@EnableMyAutoConfiguration
+public @interface MySpringBootApplication {
 }
