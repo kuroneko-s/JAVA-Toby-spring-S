@@ -20,7 +20,11 @@ public class TestController implements ApplicationContextAware {
 
     @GetMapping("/hello")
     public String hello(String name) {
-        return testService.hello(Objects.requireNonNull(name));
+        if (Objects.isNull(name) || name.isBlank()) {
+            throw new IllegalArgumentException(name);
+        }
+
+        return testService.hello(name);
     }
 
     @Override
