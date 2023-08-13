@@ -76,7 +76,6 @@ class TestConfigure {
     }
 }
 
-@EnableScheduling
 class MyTestConfigureProxy extends TestConfigure {
     private Student student;
 
