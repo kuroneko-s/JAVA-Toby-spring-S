@@ -1,7 +1,5 @@
 package com.inflearn.config;
 
-import com.inflearn.config.autoconfig.ServletConfigure;
-import com.inflearn.config.autoconfig.WebServerConfigure;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
@@ -12,5 +10,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Import({MyAutoConfigImportSelector.class})
+@MyAutoConfiguration
 public @interface EnableMyAutoConfiguration {
 }
