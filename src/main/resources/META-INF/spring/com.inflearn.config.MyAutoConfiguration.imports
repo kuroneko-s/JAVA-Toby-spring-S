@@ -1,2 +1,3 @@
 com.inflearn.config.autoconfig.ServletConfigure
-com.inflearn.config.autoconfig.WebServerConfigure
+com.inflearn.config.autoconfig.TomcatWebServerConfigure
+com.inflearn.config.autoconfig.JettyWebServerConfigure
