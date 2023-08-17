@@ -1,5 +1,5 @@
 ### Hello Test
-GET localhost:8080/hello?name=dong
+GET localhost:8080/api/hello?name=dong
 
 ### Second Test
 GET localhost:8080/

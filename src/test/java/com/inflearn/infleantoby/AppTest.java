@@ -1,10 +1,7 @@
 package com.inflearn.infleantoby;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
@@ -19,7 +16,7 @@ class AppTest {
         TestRestTemplate restTemplate = new TestRestTemplate();
         String nameParameter = "dong";
 
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/hello?name={name}", String.class, nameParameter);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/api/hello?name={name}", String.class, nameParameter);
 
         assertEquals(responseEntity.getStatusCode().value(), 200);
         assertEquals(responseEntity.getBody(), "hello " + nameParameter);
