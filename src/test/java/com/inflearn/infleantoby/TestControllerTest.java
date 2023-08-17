@@ -12,4 +12,9 @@ public class TestControllerTest {
 
         assertThrows(IllegalArgumentException.class, () -> testController.hello(null));
     }
+
+    @Test
+    void stringTest() {
+        System.out.println(String.class.getClassLoader());
+    }
 }
