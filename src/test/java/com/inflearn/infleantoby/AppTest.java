@@ -21,8 +21,6 @@ class AppTest {
         assertEquals(responseEntity.getStatusCode().value(), 200);
         assertEquals(responseEntity.getBody(), "hello " + nameParameter);
         assertTrue(Objects.requireNonNull(responseEntity.getHeaders().getContentType()).toString().startsWith(MediaType.TEXT_PLAIN_VALUE));
-
-
     }
 
 }
