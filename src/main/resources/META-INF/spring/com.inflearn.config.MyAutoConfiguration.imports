@@ -3,3 +3,4 @@ com.inflearn.config.autoconfig.TomcatWebServerConfigure
 com.inflearn.config.autoconfig.JettyWebServerConfigure
 com.inflearn.config.autoconfig.PropertyPlaceHolderConfig
 com.inflearn.config.autoconfig.PropertyPostProcessorConfig
+com.inflearn.config.autoconfig.DataSourceConfig
