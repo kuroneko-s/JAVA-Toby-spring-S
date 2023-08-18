@@ -1,5 +1,8 @@
 package com.inflearn.config.autoconfig.properties;
 
+import com.inflearn.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
     private String contextPath;
 
