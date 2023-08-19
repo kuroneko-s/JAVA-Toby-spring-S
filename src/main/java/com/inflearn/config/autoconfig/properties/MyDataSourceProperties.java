@@ -28,4 +28,20 @@ public class MyDataSourceProperties {
     public String getUrl() {
         return url;
     }
+
+    public void setDriverClassname(String driverClassname) {
+        this.driverClassname = driverClassname;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
