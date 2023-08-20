@@ -16,4 +16,9 @@ public class TestServiceDecorator implements TestService {
     public String hello(String name) {
         return "***" + this.simpleTestService.hello(name) + "***";
     }
+
+    @Override
+    public int countOf(String name) {
+        return simpleTestService.countOf(name);
+    }
 }

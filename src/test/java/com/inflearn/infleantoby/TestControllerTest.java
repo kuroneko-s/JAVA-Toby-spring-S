@@ -8,7 +8,7 @@ public class TestControllerTest {
 
     @Test
     void controllerSimpleTest() {
-        TestController testController = new TestController(new SimpleTestService(), null);
+        TestController testController = new TestController(name -> name);
 
         assertThrows(IllegalArgumentException.class, () -> testController.hello(null));
     }
