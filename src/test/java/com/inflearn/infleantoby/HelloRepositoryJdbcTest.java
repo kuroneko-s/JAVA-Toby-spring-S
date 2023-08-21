@@ -1,14 +1,16 @@
 package com.inflearn.infleantoby;
 
-import com.inflearn.config.autoconfig.DataSourceTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataSourceTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE) // web 요소들은 비활성화 한다.
+@Transactional
 class HelloRepositoryJdbcTest {
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -23,7 +25,7 @@ class HelloRepositoryJdbcTest {
     @Test
     void findHelloFailed() {
         Hello hello = repository.findHello("dong");
-        assertNotNull(hello);
+        assertNull(hello);
     }
 
     @Test

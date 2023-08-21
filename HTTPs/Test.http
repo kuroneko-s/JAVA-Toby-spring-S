@@ -1,8 +1,5 @@
 ### Hello Test
 GET localhost:7070/api/hello?name=dong
 
-### Second Test
-GET localhost:8080/
-
-### COUNT Test
+### Count Test
 GET localhost:7070/api/count?name=dong

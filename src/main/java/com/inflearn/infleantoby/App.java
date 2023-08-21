@@ -1,13 +1,12 @@
 package com.inflearn.infleantoby;
 
-import com.inflearn.config.MySpringBootApplication;
 import org.springframework.boot.SpringApplication;
-import org.springframework.core.annotation.Order;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.annotation.PostConstruct;
 
-@MySpringBootApplication
+@SpringBootApplication
 public class App {
     // implements InitializingBean 예전애 초기화 사용하던 객체.
     private final JdbcTemplate jdbcTemplate;
